@@ -23,6 +23,19 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
+         
+        }
+
+        private void btnSeven_Click(object sender, RoutedEventArgs e)
+        {
+            if(lblResult.Content.ToString() == "0")
+            {
+                lblResult.Content = "7";
+            }
+            else
+            {
+                lblResult.Content = $"{lblResult.Content}7";
+            }
         }
     }
 }
