@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Calculator
 {
@@ -22,6 +23,11 @@ namespace Calculator
         }
         public static double Divide(double num1, double num2)
         {
+            if (num2 ==0 )
+            {
+                MessageBox.Show("Division by 0 is not supported", "Wrong Operation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
             return num1 / num2;
         }
     }
